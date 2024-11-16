@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.Set;
 
 public class Driver {
 
@@ -32,7 +31,7 @@ public class Driver {
     }
 
     public WebElement findElement(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public List<WebElement> findElements(By locator) {

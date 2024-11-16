@@ -26,6 +26,7 @@ public class LoginPage extends BasePage {
     }
 
     public void login(String username, String password) {
+
         WebElementUtils.clickElement(driver.getWebDriver(), SIGN_IN_BUTTON, 10);
         WebElementUtils.sendKeys(driver.getWebDriver(), USERNAME_INPUT, username, 10);
         WebElementUtils.sendKeys(driver.getWebDriver(), PASSWORD_INPUT, password, 10);
