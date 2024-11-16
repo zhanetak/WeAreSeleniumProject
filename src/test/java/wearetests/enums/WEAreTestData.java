@@ -1,8 +1,8 @@
 package wearetests.enums;
 
 public enum WEAreTestData {
-    STANDARD_USER_USERNAME("adminsimeon"),
-    STANDARD_USER_PASSWORD("Test123456"),
+    STANDARD_USER_USERNAME("nikk"),
+    STANDARD_USER_PASSWORD("123456"),
     NEW_POST_MESSAGE("This is a new post"),
     NEW_POST_TITLE("Amazing Post");
 

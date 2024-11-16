@@ -15,6 +15,10 @@ public class LatestPostsPage extends BasePage {
     private static final By EXPLORE_POST_BUTTON = By.linkText("Explore this post");
     private static final By DELETE_POST_BUTTON = By.xpath("//a[text()='Delete post']");
     private static final By CONFIRM_DELETE_BUTTON = By.xpath("//input[@value='Submit']");
+    private static final By SHOW_COMMENTS_BUTTON = By.xpath("//button[text()='Show Comments']");
+    private static final By DELETE_COMMENT_BUTTON = By.xpath("//a[text()='Delete comment']");
+    private static final By LIKE_COMMENT_BUTTON = By.xpath("//input[@value='Like']");
+
 
 
     public LatestPostsPage(Driver driver) {
@@ -62,6 +66,21 @@ public class LatestPostsPage extends BasePage {
     public void clickConfirmDeletePostButton() {
         WebElement confirmDeletePostButton = driver.findElement(CONFIRM_DELETE_BUTTON);
         confirmDeletePostButton.click();
+    }
+
+    public void clickShowCommentsButton(){
+        WebElement showComments = driver.findElement(SHOW_COMMENTS_BUTTON);
+        showComments.click();
+    }
+
+    public void clickDeleteCommentsButton(){
+        WebElement deleteComments = driver.findElement(DELETE_COMMENT_BUTTON);
+        deleteComments.click();
+    }
+
+    public void clickLikeCommentsButton(){
+        WebElement likeComments = driver.findElement(LIKE_COMMENT_BUTTON);
+        likeComments.click();
     }
 }
 

@@ -12,6 +12,34 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DeleteTests extends AuthenticatedBaseWebTest {
 
     @Test
+    public void testDeleteComment(){
+        LatestPostsPage latestPostsPage = new LatestPostsPage(driver);
+        latestPostsPage.navigate();
+        latestPostsPage.exploreLatestPost();
+
+
+        latestPostsPage.clickShowCommentsButton();
+        latestPostsPage.clickDeleteCommentsButton();
+        // Locate the dropdown element
+        WebElement dropdown = driver.findElement(By.id("StringListId"));
+        // Create a Select object
+        Select select = new Select(dropdown);
+        // Select "Delete post" by visible text
+        select.selectByVisibleText("Delete comment");
+
+        latestPostsPage.clickConfirmDeletePostButton();
+
+        //Assert
+        // Locate the element
+        WebElement confirmationMessage = driver.findElement(By.xpath("//h1[@class='mb-3 bread']"));
+        // Get the text of the element
+        String actualText = confirmationMessage.getText();
+        // Assert that the text matches
+        assertEquals("Comment deleted successfully", actualText);
+        System.out.println("Test for comment deletion passed.");
+    }
+
+    @Test
     public void testDeletePost() {
 
         LatestPostsPage latestPostsPage = new LatestPostsPage(driver);
