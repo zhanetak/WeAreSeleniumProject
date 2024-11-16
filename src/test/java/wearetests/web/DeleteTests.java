@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DeleteTests extends AuthenticatedBaseWebTest {
 
+
     @Label("JIRA ID: SNT-93")
     @Test
     public void testDeletePost() {
