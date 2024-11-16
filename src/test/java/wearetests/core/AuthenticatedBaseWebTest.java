@@ -1,8 +1,7 @@
 package wearetests.core;
 
 import com.weare.pages.LoginPage;
-import com.weare.testframework.config.ConfigLoader;
-import com.weare.testframework.core.DriverManager;
+import jdk.jfr.Label;
 import org.junit.jupiter.api.BeforeEach;
 import wearetests.enums.WEAreTestData;
 
@@ -11,8 +10,7 @@ public abstract class AuthenticatedBaseWebTest extends BaseWebTest {
     @Override
     @BeforeEach
     public void setUp() {
-        driver = DriverManager.getDriver(); // Fetch driver from DriverManager
-        driver.getWebDriver().get(ConfigLoader.getBaseUrl());
+        super.setUp();
         authenticateUser();
     }
 
