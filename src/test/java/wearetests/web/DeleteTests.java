@@ -1,6 +1,7 @@
 package wearetests.web;
 
 import com.weare.pages.LatestPostsPage;
+import jdk.jfr.Label;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DeleteTests extends AuthenticatedBaseWebTest {
 
+
+    @Label("JIRA ID: SNT-93")
     @Test
     public void testDeleteComment(){
         LatestPostsPage latestPostsPage = new LatestPostsPage(driver);
@@ -39,6 +42,7 @@ public class DeleteTests extends AuthenticatedBaseWebTest {
         System.out.println("Test for comment deletion passed.");
     }
 
+    @Label("JIRA ID: SNT-94")
     @Test
     public void testDeletePost() {
 

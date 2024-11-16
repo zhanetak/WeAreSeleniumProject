@@ -2,10 +2,7 @@ package wearetests.suites;
 
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
-import wearetests.web.HomePageTests;
-import wearetests.web.LatestPostsTests;
-import wearetests.web.LoginTests;
-import wearetests.web.RegisterNewUser;
+import wearetests.web.*;
 
 @Suite
 @SelectClasses({
@@ -13,8 +10,10 @@ import wearetests.web.RegisterNewUser;
         LoginTests.class,
         HomePageTests.class,
         LatestPostsTests.class,
+        DeleteTests.class
 })
 public class AllTestsSuite {
+
 }
 
 
