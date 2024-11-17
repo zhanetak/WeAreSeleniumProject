@@ -8,7 +8,7 @@ import wearetests.web.*;
 @SelectClasses({
         RegisterNewUser.class,
         LoginTests.class,
-        HomePageTests.class,
+        CreateAndEditPostTests.class,
         LatestPostsTests.class,
         DeleteTests.class
 })

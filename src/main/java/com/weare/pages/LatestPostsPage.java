@@ -20,7 +20,6 @@ public class LatestPostsPage extends BasePage {
     private static final By LIKE_COMMENT_BUTTON = By.xpath("//input[@value='Like']");
 
 
-
     public LatestPostsPage(Driver driver) {
         super(driver, "/posts");
     }
