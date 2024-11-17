@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>TelerikTestingFramework</artifactId>
+    <artifactId>WEareSeleniumAutomation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -26,6 +26,7 @@
                         <include>**/*Tests.java</include>
                         <include>**/TestSuite.java</include>
                     </includes>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                 </configuration>
             </plugin>
             <plugin>
