@@ -3,7 +3,12 @@ package com.weare.pages;
 import com.weare.utils.WebElementUtils;
 import org.openqa.selenium.By;
 import com.weare.testframework.core.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage extends BasePage {
     private static final By ADD_NEW_POST_BUTTON = By.xpath("//*[@id='ftco-nav']/ul/li[8]/a");
@@ -56,7 +61,8 @@ public class HomePage extends BasePage {
     }
 
     public void clickShowAllCommentsButton() {
-        WebElementUtils.clickElement(driver.getWebDriver(), SHOW_ALL_COMMENTS_BUTTON, 10);
+        WebElement showComments = driver.findElement(SHOW_ALL_COMMENTS_BUTTON);
+        showComments.click();
     }
 
     public void editComment(String updatedComment) {
