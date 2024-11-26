@@ -9,7 +9,7 @@ import wearetests.core.BaseWebTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class RegisterNewUser extends BaseWebTest {
+public class RegisterNewUserTests extends BaseWebTest {
 
     @Test
     public void testRegisterNewUser() {

@@ -3,6 +3,7 @@ package com.weare.testframework.core;
 import com.weare.testframework.config.ConfigLoader;
 import com.weare.testframework.enums.BrowserMode;
 import com.weare.testframework.enums.BrowserType;
+import org.openqa.selenium.WebDriver;
 
 public class DriverManager {
 
@@ -18,8 +19,15 @@ public class DriverManager {
     private static Driver createDriver() {
         BrowserType browserType = ConfigLoader.getBrowserType();
         BrowserMode browserMode = ConfigLoader.getBrowserMode();
+
         int timeout = ConfigLoader.getTimeout();
-        return new Driver(BrowserFactory.createBrowser(browserType, browserMode), timeout);
+
+        WebDriver webDriver = BrowserFactory.createBrowser(browserType, browserMode);
+
+        // open browser in max window
+        webDriver.manage().window().maximize();
+
+        return new Driver(webDriver, timeout);
     }
 
     public static void quitDriver() {

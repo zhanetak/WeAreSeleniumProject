@@ -1,17 +1,11 @@
 package wearetests.web;
 
 import com.weare.pages.HomePage;
-import com.weare.pages.LatestPostsPage;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.openqa.selenium.WebElement;
 import wearetests.core.AuthenticatedBaseWebTest;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
-
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
@@ -36,7 +30,6 @@ public class CreateAndEditPostTests extends AuthenticatedBaseWebTest {
     @Order(2)
     public void testEditPostAndAddComment() {
         HomePage homePage = new HomePage(driver);
-        LatestPostsPage latestPostsPage = new LatestPostsPage(driver);
 
         String originalMessage = "Original Post " + System.currentTimeMillis();
         homePage.submitMessageToANewPost(originalMessage);
@@ -52,6 +45,7 @@ public class CreateAndEditPostTests extends AuthenticatedBaseWebTest {
 
         String commentMessage = "New Comment " + System.currentTimeMillis();
         homePage.addCommentToPost(commentMessage);
+
         assertNotNull(homePage.findElementByMessage(commentMessage), "The comment was not added.");
         System.out.println("Test for adding a comment passed.");
 

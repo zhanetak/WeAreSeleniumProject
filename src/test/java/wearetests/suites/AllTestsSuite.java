@@ -6,14 +6,11 @@ import wearetests.web.*;
 
 @Suite
 @SelectClasses({
-        RegisterNewUser.class,
+        RegisterNewUserTests.class,
         LoginTests.class,
         CreateAndEditPostTests.class,
         LatestPostsTests.class,
         DeleteTests.class
 })
 public class AllTestsSuite {
-
 }
-
-
