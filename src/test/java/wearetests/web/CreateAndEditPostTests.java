@@ -1,7 +1,6 @@
 package wearetests.web;
 
 import com.weare.pages.HomePage;
-import com.weare.testframework.config.ConfigLoader;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
