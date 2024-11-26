@@ -1,6 +1,7 @@
 package wearetests.web;
 
 import com.weare.pages.HomePage;
+import com.weare.testframework.config.ConfigLoader;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -46,10 +47,11 @@ public class CreateAndEditPostTests extends AuthenticatedBaseWebTest {
         String commentMessage = "New Comment " + System.currentTimeMillis();
         homePage.addCommentToPost(commentMessage);
 
+        driver.getWebDriver().navigate().back();
+        homePage.clickShowAllCommentsButton();
+
         assertNotNull(homePage.findElementByMessage(commentMessage), "The comment was not added.");
         System.out.println("Test for adding a comment passed.");
-
-        homePage.clickShowAllCommentsButton();
 
         String updatedCommentMessage = "Updated Comment " + System.currentTimeMillis();
         homePage.editComment(updatedCommentMessage);
