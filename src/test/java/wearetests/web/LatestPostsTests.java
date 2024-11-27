@@ -7,23 +7,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import wearetests.core.AuthenticatedBaseWebTest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LatestPostsTests extends AuthenticatedBaseWebTest {
-
     @Test
     public void testLikeLatestPost() {
         LatestPostsPage latestPostsPage = new LatestPostsPage(driver);
         latestPostsPage.navigate();
         latestPostsPage.likeLatestPost();
 
-        //Assert!
-        //TODO
+        //Assert
+        WebElement likeButton = driver.findElement(latestPostsPage.getLatestPostLocator()).findElement(latestPostsPage.getLikeButtonLocator());
+        assertNotNull(likeButton, "The like button was not found.");
 
-//        assertNotNull(driver.getWebDriver().findElement(latestPostsPage.getLatestPostLocator()),
-//                "The like action was not performed on the latest post.");
-//        System.out.println("Test for liking the latest post passed.");
+        String likeButtonValue = likeButton.getDomProperty("value");
+        assertEquals("Dislike", likeButtonValue, "The like button did not change to 'Dislike' after liking the post.");
+
+        System.out.println("Test for liking the latest post passed.");
     }
 
     @Test
@@ -49,8 +49,10 @@ public class LatestPostsTests extends AuthenticatedBaseWebTest {
         latestPostsPage.clickLikeCommentsButton();
 
         //Assert
+        String buttonValue = latestPostsPage.getCommentLikeButtonValue();
+        assertEquals("Dislike", buttonValue, "The like button for the comment did not change to 'Dislike'.");
 
-        //TODO
+        System.out.println("Test for verifying the comment like button passed.");
     }
 }
 

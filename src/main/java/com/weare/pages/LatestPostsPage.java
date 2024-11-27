@@ -18,6 +18,7 @@ public class LatestPostsPage extends BasePage {
     private static final By SHOW_COMMENTS_BUTTON = By.xpath("//button[text()='Show Comments']");
     private static final By DELETE_COMMENT_BUTTON = By.xpath("//a[text()='Delete comment']");
     private static final By LIKE_COMMENT_BUTTON = By.xpath("//input[@value='Like']");
+    private static final String COMMENT_LIKE_BUTTON_VALUE = "//li[@id='comments']//input[@type='submit']";
 
 
     public LatestPostsPage(Driver driver) {
@@ -32,6 +33,15 @@ public class LatestPostsPage extends BasePage {
         WebElement latestPostElement = driver.findElement(LATEST_POST);
         WebElement likeButton = latestPostElement.findElement(LIKE_BUTTON);
         likeButton.click();
+    }
+
+    public By getLikeButtonLocator() {
+        return LIKE_BUTTON;
+    }
+
+    public String getCommentLikeButtonValue() {
+        WebElement likeButton = driver.findElement(By.xpath(COMMENT_LIKE_BUTTON_VALUE));
+        return likeButton.getAttribute("value");
     }
 
     public void commentOnPost(String comment) {
