@@ -41,7 +41,7 @@ public class LatestPostsPage extends BasePage {
 
     public String getCommentLikeButtonValue() {
         WebElement likeButton = driver.findElement(By.xpath(COMMENT_LIKE_BUTTON_VALUE));
-        return likeButton.getAttribute("value");
+        return likeButton.getDomProperty("value");
     }
 
     public void commentOnPost(String comment) {

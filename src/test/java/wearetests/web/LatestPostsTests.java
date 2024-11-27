@@ -2,9 +2,7 @@ package wearetests.web;
 
 import com.weare.pages.LatestPostsPage;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import wearetests.core.AuthenticatedBaseWebTest;
 
 import static org.junit.jupiter.api.Assertions.*;
