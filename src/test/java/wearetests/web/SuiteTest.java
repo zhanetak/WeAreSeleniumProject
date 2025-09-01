@@ -1,4 +1,3 @@
 package wearetests.web;
 
-public class SuiteTest {
-}
+public class 

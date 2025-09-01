@@ -15,17 +15,14 @@ public class RegisterNewUserTests extends BaseWebTest {
     public void testRegisterNewUser() {
         LoginPage loginPage = new LoginPage(driver);
 
-        // Generate unique user credentials
         String uniqueUsername = TestDataGenerator.generateUniqueUsername();
         String email = ConfigLoader.get("fixedEmail", "" );
         String password = "Test123456";
 
-        // Save credentials in the shared TestContext
         getTestContext().setUsername(uniqueUsername);
         getTestContext().setEmail(email);
         getTestContext().setPassword(password);
 
-        // Perform the registration action
         loginPage.createNewUser(uniqueUsername, email, password);
 
         String welcomeMessage = loginPage.getWelcomeMessageText();

@@ -23,21 +23,14 @@ public class DeleteTests extends AuthenticatedBaseWebTest {
 
         latestPostsPage.clickShowCommentsButton();
         latestPostsPage.clickDeleteCommentsButton();
-        // Locate the dropdown element
         WebElement dropdown = driver.findElement(By.id("StringListId"));
-        // Create a Select object
         Select select = new Select(dropdown);
-        // Select "Delete post" by visible text
         select.selectByVisibleText("Delete comment");
 
         latestPostsPage.clickConfirmDeletePostButton();
 
-        //Assert
-        // Locate the element
         WebElement confirmationMessage = driver.findElement(By.xpath("//h1[@class='mb-3 bread']"));
-        // Get the text of the element
         String actualText = confirmationMessage.getText();
-        // Assert that the text matches
         assertEquals("Comment deleted successfully", actualText);
         System.out.println("Test for comment deletion passed.");
     }
@@ -51,19 +44,13 @@ public class DeleteTests extends AuthenticatedBaseWebTest {
         latestPostsPage.exploreLatestPost();
         latestPostsPage.clickDeletePostButton();
 
-        // Locate the dropdown element
         WebElement dropdown = driver.findElement(By.id("StringListId"));
-        // Create a Select object
         Select select = new Select(dropdown);
-        // Select "Delete post" by visible text
         select.selectByVisibleText("Delete post");
 
         latestPostsPage.clickConfirmDeletePostButton();
-        // Locate the element
         WebElement confirmationMessage = driver.findElement(By.xpath("//h1[@class='mb-3 bread']"));
-        // Get the text of the element
         String actualText = confirmationMessage.getText();
-        // Assert that the text matches
         assertEquals("Post deleted successfully", actualText);
         System.out.println("Test for post deletion passed.");
     }

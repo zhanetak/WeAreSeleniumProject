@@ -14,7 +14,6 @@ public class LatestPostsTests extends AuthenticatedBaseWebTest {
         latestPostsPage.navigate();
         latestPostsPage.likeLatestPost();
 
-        //Assert
         WebElement likeButton = driver.findElement(latestPostsPage.getLatestPostLocator()).findElement(latestPostsPage.getLikeButtonLocator());
         assertNotNull(likeButton, "The like button was not found.");
 
@@ -42,11 +41,9 @@ public class LatestPostsTests extends AuthenticatedBaseWebTest {
         latestPostsPage.navigate();
         latestPostsPage.exploreLatestPost();
 
-        //Act
         latestPostsPage.clickShowCommentsButton();
         latestPostsPage.clickLikeCommentsButton();
 
-        //Assert
         String buttonValue = latestPostsPage.getCommentLikeButtonValue();
         assertEquals("Dislike", buttonValue, "The like button for the comment did not change to 'Dislike'.");
 

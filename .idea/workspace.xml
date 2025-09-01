@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e4100fe2-dd71-40d9-b86a-1a65f7cc8544" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wearetests/enums/WEAreTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wearetests/enums/WEAreTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wearetests/web/DeleteTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wearetests/web/DeleteTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wearetests/web/LatestPostsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wearetests/web/LatestPostsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wearetests/web/RegisterNewUserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wearetests/web/RegisterNewUserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wearetests/web/SuiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wearetests/web/SuiteTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="326OaF3z2aKHyzYCNy4wAz0zA3I" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4100fe2-dd71-40d9-b86a-1a65f7cc8544" name="Changes" comment="" />
+      <created>1756737618098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756737618098</updated>
+    </task>
+    <servers />
+  </component>
+</project>
